@@ -1,26 +1,23 @@
-# 测试
+# DEMO
 
-**markdown**
-_markdown_
-~~markdown~~
-
----
-
-<u>markdown</u>
-<font color=red>markdown</font>
-什么是[^ctoc]?
-[^ctoc]:create table of content.
-
-- 第一项
-  > 菜鸟教程
-  > 学的不仅是技术更是梦想
-- 第二项
-
-[小米 logo](https://cindiou.github.io/html-css-demo/小米logo/)
-[小米 logo][1]
-[1]: https://cindiou.github.io/html-css-demo/小米logo/
-
-| 左对齐 sssss | 右对齐 ddddd | 居中对齐 fffff |
-| :----------- | -----------: | :------------: |
-| 单元格       |       单元格 |     单元格     |
-| 单元格       |       单元格 |     单元格     |
+1. [流动的水滴](https://cindiou.github.io/html-css-demo/流动的水滴/)
+2. [丝滑图标发达效果](https://cindiou.github.io/html-css-demo/丝滑图标发达效果/src/)
+3. [小米 logo](https://cindiou.github.io/html-css-demo/小米logo/)
+4. [旋转的小球](https://cindiou.github.io/html-css-demo/旋转的小球/)
+5. [摇动的骰子](https://cindiou.github.io/html-css-demo/摇动的骰子/)
+6. [移动端布局练习](https://cindiou.github.io/html-css-demo/移动端布局练习/src/)
+7. [有质感的按钮](https://cindiou.github.io/html-css-demo/有质感的按钮/)
+8. [Animated Heart](https://cindiou.github.io/html-css-demo/Animated Heart/src/)
+9. [BiliBili Winter Banner](https://cindiou.github.io/html-css-demo/BiliBili Winter Banner/src)
+10. [create painter by canvas](https://cindiou.github.io/html-css-demo/create painter by canvas)
+11. [CSS Carousel](https://cindiou.github.io/html-css-demo/CSS Carousel/src/)
+12. [CSS slice](https://cindiou.github.io/html-css-demo/CSS slice/src/)
+13. [Day + Night](https://cindiou.github.io/html-css-demo/Day + Night/)
+14. [dynamic resume](https://cindiou.github.io/html-css-demo/dynamic resume/src/)
+15. [font style](https://cindiou.github.io/html-css-demo/font style/)
+16. [IOS button](https://cindiou.github.io/html-css-demo/IOS button/)
+17. [IPhone SE Colors](https://cindiou.github.io/html-css-demo/IPhone SE Colors/)
+18. [neon text](https://cindiou.github.io/html-css-demo/neon text/)
+19. [pikachu](https://cindiou.github.io/html-css-demo/pikachu/src/)
+20. [Spootlight 文字放大镜](https://cindiou.github.io/html-css-demo/Spootlight文字放大镜/src/)
+21. [Vue Calculator](https://cindiou.github.io/html-css-demo/Vue Calculator/)
