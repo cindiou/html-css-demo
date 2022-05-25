@@ -4,7 +4,7 @@
 2. [丝滑图标放大效果](https://cindiou.github.io/html-css-demo/丝滑图标放大效果/src/)
 3. [小米 logo](https://cindiou.github.io/html-css-demo/小米logo/)
 4. [旋转的小球](https://cindiou.github.io/html-css-demo/旋转的小球/)
-5. [摇动的骰子](https://cindiou.github.io/html-css-demo/摇动的骰子/)
+5. [摇动的骰子](https://cindiou.github.io/html-css-demo/摇动的骰子/src/)
 6. [移动端布局练习](https://cindiou.github.io/html-css-demo/移动端布局练习/src/)
 7. [有质感的按钮](https://cindiou.github.io/html-css-demo/有质感的按钮/)
 8. [跳动的心](https://cindiou.github.io/html-css-demo/Animated%20Heart/src/)
