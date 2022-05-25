@@ -14,7 +14,7 @@
 12. [CSS slice](https://cindiou.github.io/html-css-demo/CSS%20slice/src/)
 13. [背景动效：日月切换](https://cindiou.github.io/html-css-demo/Day%20+%20Night/)
 14. [简单动态简历](https://cindiou.github.io/html-css-demo/dynamic%20resume/src/)
-15. [font style](https://cindiou.github.io/html-css-demo/font%20style/)
+15. [字体动效：跳动字体](https://cindiou.github.io/html-css-demo/font%20style/)
 16. [IOS 按钮](https://cindiou.github.io/html-css-demo/IOS%20button/)
 17. [IPhone SE Colors](https://cindiou.github.io/html-css-demo/IPhone%20SE%20Colors/)
 18. [字体动效：霓虹字体](https://cindiou.github.io/html-css-demo/neon%20text/)
