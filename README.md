@@ -1,7 +1,7 @@
 # DEMO
 
 1. [流动的水滴](https://cindiou.github.io/html-css-demo/流动的水滴/)
-2. [丝滑图标放大效果](https://cindiou.github.io/html-css-demo/丝滑图标发达效果/src/)
+2. [丝滑图标放大效果](https://cindiou.github.io/html-css-demo/丝滑图标放大效果/src/)
 3. [小米 logo](https://cindiou.github.io/html-css-demo/小米logo/)
 4. [旋转的小球](https://cindiou.github.io/html-css-demo/旋转的小球/)
 5. [摇动的骰子](https://cindiou.github.io/html-css-demo/摇动的骰子/)
@@ -13,11 +13,11 @@
 11. [CSS 实现简单轮播图](https://cindiou.github.io/html-css-demo/CSS%20Carousel/src/)
 12. [CSS slice](https://cindiou.github.io/html-css-demo/CSS%20slice/src/)
 13. [背景动效：日月切换](https://cindiou.github.io/html-css-demo/Day%20+%20Night/)
-14. [简单动态简历](https://cindiou.github.io/html-css-demo/dynamic%20resume/src/)
+14. [动态绘制太极图](https://cindiou.github.io/html-css-demo/dynamic%20resume/src/)
 15. [字体动效：跳动字体](https://cindiou.github.io/html-css-demo/font%20style/)
 16. [IOS 按钮](https://cindiou.github.io/html-css-demo/IOS%20button/)
 17. [IPhone SE Colors](https://cindiou.github.io/html-css-demo/IPhone%20SE%20Colors/)
 18. [字体动效：霓虹字体](https://cindiou.github.io/html-css-demo/neon%20text/)
-19. [CSS 实现皮卡丘](https://cindiou.github.io/html-css-demo/pikachu/dist/)
+19. [CSS 实现皮卡丘](https://cindiou.github.io/html-css-demo/pikachu/src/)
 20. [Spootlight 文字放大镜](https://cindiou.github.io/html-css-demo/Spootlight文字放大镜/src/)
 21. [Vue 实现的简易计算器](https://cindiou.github.io/html-css-demo/Vue%20Calculator/)
