@@ -1,0 +1,35 @@
+Arguments: 
+  F:\node\node.exe F:\Software\bin\yarn.js add jquery
+
+PATH: 
+  F:\Software\cmder\vendor\git-for-windows\mingw64\bin;F:\Software\cmder\vendor\git-for-windows\usr\bin;C:\Users\汪宇\bin;F:\environmen\JAVA\JDK11\bin;F:\environmen\JAVA\JDK11\jre\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;F:\nvm;F:\node;F:\Software\bin;F:\myOwnerScripts;C:\Users\汪宇\AppData\Local\Programs\Microsoft VS Code\bin;F:\environmen\Python 3.9\Scripts;F:\environmen\Python 3.9;F:\environmen\Scripts;F:\environmen;C:\Users\汪宇\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip;F:\nvm;F:\node;C:\Users\汪宇\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.8.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.npm.taobao.org
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26)
+
+npm manifest: 
+  {
+      "scripts":{
+          "build" : "rm -rf dist && parcel build src/index.html --no-minify --public-url ./"
+      },
+      "name": "myOwnerScripts",
+      "version": "1.0.0",
+      "main": "index.js",
+      "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

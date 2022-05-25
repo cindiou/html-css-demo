@@ -1,0 +1,16 @@
+@mixin help {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0px 160px 0 red, 0px -160px 0 red, 160px 0px 0 red,
+    -160px 0px 0 red;
+}

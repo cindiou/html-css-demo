@@ -1,0 +1,128 @@
+@import "_reset";
+@import "_script";
+
+label {
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked + svg {
+      animation: pop linear 1s forwards;
+
+      #heart {
+        animation: draw-heart 1s linear forwards;
+      }
+    }
+
+    &:checked ~ span {
+      animation: 0.5s blink ease-in-out forwards 0.85s;
+
+      /*   之所以设置延迟，原因在于想要在心形将要填充完毕之后，小球在被发射出去 */
+      &::after {
+        animation: blink-after 0.5s forwards 0.85s ease-in-out;
+      }
+    }
+  }
+
+  svg {
+    width: 200px;
+    position: relative;
+    z-index: 10;
+
+    #heart {
+      fill: #ccc;
+      stroke: red;
+
+      stroke: {
+        width: 20;
+        dasharray: 1600;
+        dashoffset: 1600;
+        linecap: round;
+      }
+    }
+
+    + span {
+      @include help;
+
+      transform: translate(-50%, -50%) scale(0);
+
+      &::after {
+        content: "";
+
+        @include help;
+
+        transform: translate(-50%, -50%) rotate(45deg) scale(0);
+      }
+    }
+  }
+}
+
+@keyframes draw-heart {
+  0% {
+    stroke-dashoffset: 1600;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill: #ccc;
+  }
+
+  100% {
+    fill: red;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+
+    opacity: 0;
+  }
+}
+
+@keyframes blink-after {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(0.5);
+
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.1);
+
+    opacity: 0;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

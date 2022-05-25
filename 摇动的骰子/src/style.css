@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.dice {
+  background: url(../imgs/random-dice.png) no-repeat 0% 100%;
+  width: 366px;
+  height: 366px;
+  /* border: 1px solid red; */
+
+  animation: random 0.2s steps(6, jump-none) infinite;
+}
+
+@keyframes random {
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+#dice {
+  display: none;
+}
+
+#dice:checked + label .dice {
+  animation-play-state: paused;
+}
+
+.dice::before {
+  content: "?";
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: inherit;
+  height: inherit;
+
+  font-size: 320px;
+  font-family: Helvetica;
+
+  /* background: #000; */
+  border-radius: 60px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
+}
+
+#dice:checked + label .dice::before {
+  display: none;
+}

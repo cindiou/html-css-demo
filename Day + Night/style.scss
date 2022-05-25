@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin common_tag {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin common_presudo {
+  content: "";
+  display: block;
+
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.sun {
+  @include common_tag();
+  background-color: #ffeea2;
+
+  // display: none;
+  z-index: 10;
+  clip-path: inset(0 50% 0 0);
+  &::after {
+    @include common_presudo();
+    background-color: orange;
+  }
+}
+
+.sea {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 30%;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+
+  z-index: 20;
+}
+
+.moon {
+  @include common_tag();
+  background-color: #040720;
+
+  &::after {
+    @include common_presudo();
+    // border: 1px solid red;
+
+    box-shadow: 100px 80px 0 0 cyan;
+    transform: translate(-100px, -80px);
+  }
+}

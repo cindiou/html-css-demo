@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+div {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  background-color: #ea6102;
+  border-radius: 150px;
+  animation: rotate 6s infinite ease-in-out;
+  perspective: 600px;
+}
+
+@keyframes rotate {
+  0%,
+  100% {
+    transform: rotate3d(0, 1, 0, -30deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 30deg);
+  }
+}
+
+div::before {
+  content: "";
+  display: block;
+  width: 190px;
+  height: 170px;
+  position: absolute;
+  left: 86px;
+  top: 132px;
+  /*  分区-1 */
+
+  box-sizing: border-box;
+  /* 伪元素在里面需要特殊加box-sizing，不然不起作用 */
+
+  border-color: white;
+  border-style: solid;
+  border-left-width: 40px;
+  border-right-width: 40px;
+  border-top-width: 36px;
+  border-radius: 4px;
+  border-top-right-radius: 56px;
+  border-bottom-width: 0px;
+}
+div::after {
+  /* border: 1px solid black; */
+
+  content: "";
+  display: block;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  /*   left:0px;top:0px; */
+
+  left: 160px;
+  top: 198px;
+  border-radius: 4px;
+  background-color: white;
+  /*  分区-2 */
+  box-shadow: 0px 63px 0px 0px white, 0px 27px 0px 0px white,
+    /* ===== */ 150px -66px 0px 0px white, 150px -29px 0px 0px white,
+    150px 8px 0px 0px white, 150px 45px 0px 0px white, 150px 62px 0px 0px white;
+}

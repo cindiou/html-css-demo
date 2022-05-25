@@ -1,0 +1,135 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+:root {
+  --offset: 8px;
+  overflow: hidden;
+}
+
+$colors: (#07a6f1, #0ec15d, #633e9c, #f45f7f);
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  width: 450px;
+  font: {
+    size: 60px;
+    family: Helvetica;
+  }
+  line-height: 1;
+
+  .mask {
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    // border: 1px solid red;
+    margin-top: var(--offset);
+
+    span {
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      top: 60px;
+
+      padding-bottom: var(--offset);
+
+      background-size: 100% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-repeat: no-repeat;
+
+      &[data-show] {
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out; //只想要移入或者移除时有效果，而不是任一span都有效果
+      }
+      &[data-up] {
+        transform: translateY(-200%);
+        transition: transform 0.5s ease-in-out; //只想要移入或者移除时有效果，而不是任一span都有效果
+      }
+
+      @for $li from 1 through 4 {
+        &:nth-of-type(#{$li}) {
+          background-image: linear-gradient(
+            to right,
+            lighten(nth($colors, $li), 10%) 0%,
+            darken(nth($colors, $li), 10%) 100%
+          );
+        }
+      }
+    }
+
+    // @each $color in $colors {
+    //   &:nth-of-type(#{index($colors,$color)}) {
+    //     color: $color;
+    //   }
+    // }
+  }
+}
+
+// :root {
+//   --offset: 15px;
+// }
+
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100vh;
+// }
+
+// h2 {
+//   width: 980px;
+//   font-size: 100px;
+//   font-family: Helvetica;
+//   line-height: 1.06;
+//   letter-spacing: -0.02em;
+//   color: #1d1d1f;
+
+//   .mask {
+//     height: 106px;
+//     position: relative;
+//     // overflow: hidden;
+//     margin-top: var(--offset);
+//     border: 1px solid red;
+
+//     span {
+//       display: block;
+//       box-sizing: border-box;
+//       position: absolute;
+//       top: 100px;
+//       padding-bottom: var(--offset);
+
+//       background-size: 100% 100%;
+//       -webkit-background-clip: text;
+//       background-clip: text;
+//       -webkit-text-fill-color: transparent;
+//       background-repeat: no-repeat;
+
+//       &[data-show] {
+//         transform: translateY(-106px);
+//         // transition: 0.5s transform ease-in-out;
+//       }
+//       &[data-up] {
+//         transform: translateY(-212px);
+//         // transition: 0.5s transform ease-in-out;
+//       }
+//       @for $li from 1 through 4 {
+//         &:nth-of-type(#{$li}) {
+//           background-image: linear-gradient(
+//             to right,
+//             lighten(nth($colors, $li), 10%) 0%,
+//             darken(nth($colors, $li), 10%) 100%
+//           );
+//         }
+//       }
+//     }
+//   }
+// }

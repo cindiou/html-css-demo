@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.neon-wrap {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.neon-wrap .neon-by {
+  color: #e91e63;
+  font-size: 10px;
+  text-shadow: -6px 0px 4px #e71734, -6px 0px 20px #e71734;
+}
+
+.neon-wrap .text {
+  font-family: "Monoton", cursive;
+  font-size: 100px;
+  animation: neon 4s infinite;
+}
+
+@keyframes neon {
+  0%,
+  31%,
+  33%,
+  35% {
+    color: #222;
+    text-shadow: -6px 0px 4px #222, -6px 0px 20px #222;
+  }
+  32%,
+  34%,
+  36%,
+  100% {
+    color: #e91e63;
+    text-shadow: -2px 0px 4px #e71734, -4px 0px 20px #e71734, -6px 0px 10px #eb5e0d;
+  }
+}

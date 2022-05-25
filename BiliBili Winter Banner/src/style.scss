@@ -1,0 +1,67 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 160px;
+  overflow: hidden;
+
+  position: relative;
+
+  --x: 0.5;
+
+  .view,
+  .tree {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img,
+  video {
+    position: absolute;
+
+    display: block;
+    width: 120%; //支持位移
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .morning {
+    z-index: 20;
+    opacity: calc(1 - (var(--x) - 0.25) / 0.25);
+  }
+
+  .afternoon {
+    z-index: 10;
+    opacity: calc(1 - (var(--x) - 0.5) / 0.5);
+  }
+
+  .view {
+    transform: translateX(calc(var(--x) * 100px));
+  }
+  .tree {
+    transform: translateX(calc(var(--x) * 50px));
+    filter: blur(2px);
+  }
+
+  .moving {
+    .view,
+    .tree,
+    .morning,
+    .afternoon {
+      transition: none;
+    }
+  }
+
+  .window-cover {
+    opacity: calc((var(--x) - 0.8) / 0.2);
+  }
+}

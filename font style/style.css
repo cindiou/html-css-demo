@@ -1,0 +1,84 @@
+/* * {
+  padding: 0;
+  margin: 0;
+} */
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Helvetica;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 5rem;
+  /* margin-bottom: 80px; */
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+span {
+  display: inline-block;
+}
+
+/* 只有当h1有animate这个类时候，动画才会触发 ;
+同时由于这个动画没有设置animation-iteration-count,默认只会运行一次就结束，如果保持animate类在h1标签这一状态不变，浏览器不会重复渲染，不会重新计算、运行动画
+*/
+h1.animate span {
+  animation-name: var(--animation);
+  animation-duration: 0.4s;
+  animation-delay: var(--delay);
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translate(0px);
+  }
+
+  50% {
+    transform: translate(-10px);
+  }
+}
+
+@keyframes pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes flip {
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    color: inherit;
+  }
+
+  50% {
+    color: yellow;
+  }
+}

@@ -1,0 +1,147 @@
+$colors: #f2e205 #f25c05 #495f8c;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+ul {
+  &.slides {
+    position: relative;
+    width: 600px;
+    height: 280px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+
+    overflow: hidden;
+
+    .container {
+      width: inherit;
+      height: inherit;
+
+      //   animation: autoScroll 1.5s infinite alternate steps(3, jump-none);
+
+      .navigator {
+        width: 100%;
+        box-sizing: border-box;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+
+        display: none;
+
+        i {
+          color: #333;
+          font-size: 40px;
+
+          cursor: pointer;
+        }
+      }
+
+      .controls-visible {
+        position: absolute;
+        bottom: 12px;
+
+        width: 100%;
+        text-align: center;
+
+        label {
+          display: inline-block;
+
+          width: 10px;
+          height: 10px;
+
+          margin: 0 3px;
+
+          border-radius: 50%;
+          background-color: #fff;
+          border: 2px solid #fff;
+
+          cursor: pointer;
+        }
+      }
+      li {
+        &.slide {
+          width: inherit;
+          height: inherit;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          color: #fff;
+          font: {
+            family: Helvetica;
+            size: 120px;
+          }
+
+          /* transition: transform 0.5s ease-in-out;
+        */
+
+          @for $li from 1 through 3 {
+            &:nth-of-type(#{$li}) {
+              background-color: nth($colors, $li);
+              left: percentage($li - 1);
+            }
+          }
+        }
+      }
+
+      input[type="radio"] {
+        position: relative;
+        z-index: 100;
+
+        display: none;
+
+        @for $li from 1 through 3 {
+          &:nth-of-type(#{$li}):checked ~ {
+            .controls-visible label:nth-of-type(#{$li}) {
+              background-color: #333;
+            }
+
+            .slide {
+              transform: translateX(percentage(-($li - 1)));
+            }
+
+            .navigator:nth-of-type(#{$li}) {
+              display: flex;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        li.slide {
+          transition: transform 0.5s ease-in-out;
+        }
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+/* @keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+ */

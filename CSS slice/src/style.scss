@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+$li: 1;
+
+ul.stacks {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  li {
+    flex: 1;
+    background-color: #ccc;
+    position: relative;
+    /*  margin-left: 1px; */
+
+    overflow: hidden;
+    transition: transform 1s ease-in-out;
+    /* 給每个子元素li加过渡，若加载父元素上太快了 */
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 100vh;
+
+      background-image: url(https://images.unsplash.com/photo-1536700503339-1e4b06520771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80);
+
+      background-size: cover;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    @for $li from 1 through 10 {
+      &:nth-child(#{$li}) {
+        transition-delay: calc(#{10-$li} * 0.1s);
+        &::after {
+          left: calc(#{$li - 1} * -10vw);
+        }
+      }
+    }
+  }
+  &:hover li {
+    transform: translateY(-100vh);
+  }
+}
