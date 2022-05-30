@@ -1,4 +1,6 @@
 # DEMO
+以下案列大多数来自于 B站[CodeStartUp起码课](https://space.bilibili.com/451368848) 和 其他一些Up主，主要用于本人练习CSS，在此非常感谢他们的技术分享；
+点击下列链接可进行预览；
 
 1. [流动的水滴](https://cindiou.github.io/html-css-demo/流动的水滴/)
 2. [丝滑图标放大效果](https://cindiou.github.io/html-css-demo/丝滑图标放大效果/src/)
